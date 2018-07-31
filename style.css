@@ -1,0 +1,387 @@
+/*** Header Styles ***/
+#logo {
+    padding-top: 10px;
+    margin: auto;
+    display: block;    
+}
+
+.phone {
+    font-family: 'roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    background: url("img/phone.png") no-repeat left;
+    text-decoration: none;
+    margin: 25px 0 0 40px;
+    padding: 0 0 0 10px;
+}
+.phone a{
+    outline: none;
+    color: #787868;
+    text-decoration: none;
+}
+.phone a:hover {
+    outline: none;
+    color: #787868;
+    text-decoration: none;
+}
+.box1 {
+    font-family: 'roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 15px 44px 0 0;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d5b087;
+    padding: 9px 13px 9px 13px;
+    float: right;
+    color:black;
+}
+
+.box1:hover {
+    background-color: #d5b087;
+    outline: none;
+    color: black;
+    text-decoration: none;
+}
+/** Nav Styles **/
+#width {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+.nav-link {
+    color: #333333;
+    text-transform: uppercase;
+    font-family: 'roboto', sans-serif;
+    font-size: 15px; 
+    text-align: center; 
+    margin-bottom: 1px; 
+    font-weight: bold;
+}
+.nav-link:hover {
+    color: black;
+    border-bottom-style: solid;
+    border-bottom-color: #d5b087;
+    border-bottom-width: 1px;
+    margin-bottom: 0px;
+    
+}
+
+/** Work Styles **/
+#main {
+    position: relative;
+    width: 100%;
+}
+
+.hider-nav {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: -10px;
+}
+
+.hider-public {
+    position: relative;
+    z-index: 1;
+    top: -22px;
+    float: left;
+    background-image: url("img/hider-public.png");
+    height: auto;
+    overflow: hidden;
+    color: white;
+    text-transform: uppercase;
+    padding-top: 315px;
+    padding-left: 250px; 
+    font-family: 'roboto', sans-serif;
+    
+
+}
+.hovered {
+    position:absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    color:white;
+    background: #4a433b;
+    width: 100%;
+    padding: 250px 20px 20px 20px;
+    opacity: 0;
+    animation-name: fadeFromtop;
+    -webkit-animation-name: fadeFromtop;
+    animation-duration: 400ms;
+    -webkit-animation-duration: 400ms;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    }
+.hider-public:hover .hovered{
+    padding: 30px 20px 20px 20px;
+    animation-name: fadeFromBottom;
+    -webkit-animation-name: fadeFromBottom;
+    animation-duration: 400ms;
+    -webkit-animation-duration: 400ms;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.hider-public h2 {
+    font-size: 20.4px;
+}
+.hider-public h1 {
+    font-size: 32px;
+    text-decoration: double;
+    line-height: 11px;
+}
+.hider-public p {
+    font-size: 12px;
+}
+@keyframes fadeFromBottom  {
+        0%{
+            opacity:0;
+            -webkit-transform: translateY(100%);
+            -moz-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            -o-transform: translateY(100%);
+            transform: translateY(100%);
+        }
+        100%{
+            opacity: .8;
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(0px);
+            -ms-transform: translateY(0px);
+            -o-transform: translateY(0px);
+            transform: translateY(0px);
+            display: block;
+        }
+    }
+@keyframes fadeFromtop  {
+    0%{
+        opacity:.8;
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+}
+.text2 {
+    padding-top: 4%;
+    padding-right: 26%;
+    text-align: right;
+}
+.text {
+    padding-top: 4%;
+    padding-left: 26%;
+}
+.hider-private {
+    position: relative;
+    z-index: 1;
+    top: -22px;
+    float: left;
+    background-image: url("img/hider-private.png");
+    height: 449px;
+    overflow: hidden;
+    color: white;
+    text-transform: uppercase;
+    padding-top: 315px;
+    padding-left: 250px; 
+    font-family: 'roboto', sans-serif;
+ 
+}
+
+.hider-private:hover .hovered{
+    padding: 30px 20px 20px 20px;
+    animation-name: fadeFromBottom;
+    -webkit-animation-name: fadeFromBottom;
+    animation-duration: 400ms;
+    -webkit-animation-duration: 400ms;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.hider-private h2 {
+    font-size: 20.4px;
+}
+.hider-private h1 {
+    font-size: 32px;
+    text-decoration: double;
+    line-height: 11px;
+}
+.hider-private p {
+    font-size: 12px;
+}
+.box2 {
+    font-family: 'roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin: auto;
+    text-transform: uppercase;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d5b087;
+    padding: 17px 0 17px 17px;
+    width: 138px;
+    float: left;
+    outline: none;
+    color: black;
+    text-decoration: none;
+    text-align: left;
+}
+
+.box2:hover {
+    outline: none;
+    color: black;
+    text-decoration: none;
+    background-color: #d5b087;
+}
+.custom-work {
+    background-image: url('img/back-custom-work.png');
+    overflow: hidden;
+    height: 168px;
+    float: left;
+    position: relative;
+    z-index: 3;
+    margin-top: -22px;
+    color: #3a3429;
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 40px;
+}
+.custom-work span {
+    color: white;
+    background-image: url('img/underline1.png') no-repeat;
+    background-size: 100% auto;
+    display: inline-block;
+    padding: 0 0 20px;
+    height: 1px;
+}
+.box3 {
+    font-family: 'roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin: auto;
+    text-transform: uppercase;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    padding: 17px 17px 17px 17px;
+    width: 200px;   
+    color: white;
+}
+.box3:hover {
+    outline: none;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+/** about **/
+#amy-working {    
+    padding-top: 54px;
+    margin:auto;
+    display:block;
+}
+.about {
+    font-family: 'roboto', sans-serif;
+    padding: 76px 0 30px 20px;
+    
+}
+.about h1 {
+    font-weight: bold;
+    font-size: 26px;
+}
+.about h2 {
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.about p {
+    font-size: 14px;
+    font-weight: bold;
+}
+.logos {
+    
+    padding: 76px 20px 0 0;    
+    font-family: 'roboto', sans-serif;
+    text-align: center;
+}
+.logos h1 {
+    font-size: 17px;
+}
+.logos img {
+    margin: auto;
+    display: block;
+    padding-top: 10px;
+}
+.logos a {
+    color: black;
+}
+/** education **/
+.ed {
+    background-image: url('img/texture.png');
+    font-family: 'roboto', sans-serif;
+}
+.ed h1 {
+    font-size: 22px;
+}
+.ed hr {
+    width: 42px;
+    height: 2px;
+    background-color: #babeab;
+    float: left;
+    margin-top: 10px;
+}
+.ed p {
+    font-size: 12px;
+}
+.circlewrap {
+    width: 50px;
+    margin-top: 42px;
+}
+.circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 200px;
+    background-color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 13px;
+    padding-top: 13px;
+}
+.years {
+    padding: 22px 0 22px 30%; 
+    float: left;
+}
+.sep {
+    height: 16px;
+    width: 1px;
+    background-color: white;
+    margin: 4px auto 4px auto;
+}
+.info {
+    float: left;
+    margin-top: 72px;
+}
+.amy {
+    overflow: visible !important;
+    padding: 0 0 0 0;
+}
