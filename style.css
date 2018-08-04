@@ -4,7 +4,6 @@
     margin: auto;
     display: block;    
 }
-
 .phone {
     font-family: 'roboto', sans-serif;
     font-size: 13px;
@@ -44,15 +43,20 @@
     outline: none;
     color: black;
     text-decoration: none;
+    transition: 400ms;
 }
 /** Nav Styles **/
-#width {
-    width: 100%;
+
+.navbar ul {
     display: flex;
-    justify-content: space-around;
-    margin: 15px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
+.navbar ul li {
+    flex-grow: 1;
+    padding: 10px;
+}
 .nav-link {
     color: #333333;
     text-transform: uppercase;
@@ -61,6 +65,7 @@
     text-align: center; 
     margin-bottom: 1px; 
     font-weight: bold;
+    padding: 0 0 0 0;
 }
 .nav-link:hover {
     color: black;
@@ -68,7 +73,6 @@
     border-bottom-color: #d5b087;
     border-bottom-width: 1px;
     margin-bottom: 0px;
-    
 }
 
 /** Work Styles **/
@@ -97,34 +101,48 @@
     padding-top: 315px;
     padding-left: 250px; 
     font-family: 'roboto', sans-serif;
-    
+}
+.hider-bg {
+    background: #4a433b;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
 }
+.hider-bg:hover {
+    background: #4a433b;
+    opacity: .8;
+    transition: 600ms;
+    
+}
+
+
 .hovered {
     position:absolute;
     top:0;
     left: 0;
     height: 100%;
     color:white;
-    background: #4a433b;
     width: 100%;
-    padding: 250px 20px 20px 20px;
     opacity: 0;
     animation-name: fadeFromtop;
     -webkit-animation-name: fadeFromtop;
-    animation-duration: 400ms;
-    -webkit-animation-duration: 400ms;
+    animation-duration: 600ms;
+    -webkit-animation-duration: 600ms;
     animation-timing-function: ease-out;
     -webkit-animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
     }
 .hider-public:hover .hovered{
-    padding: 30px 20px 20px 20px;
+    padding: 30px 0 0 0;
     animation-name: fadeFromBottom;
     -webkit-animation-name: fadeFromBottom;
-    animation-duration: 400ms;
-    -webkit-animation-duration: 400ms;
+    animation-duration: 600ms;
+    -webkit-animation-duration: 600ms;
     animation-timing-function: ease-in;
     -webkit-animation-timing-function: ease-in;
     animation-fill-mode: forwards;
@@ -144,7 +162,7 @@
 }
 @keyframes fadeFromBottom  {
         0%{
-            opacity:0;
+            opacity:1;
             -webkit-transform: translateY(100%);
             -moz-transform: translateY(100%);
             -ms-transform: translateY(100%);
@@ -152,18 +170,17 @@
             transform: translateY(100%);
         }
         100%{
-            opacity: .8;
+            opacity: 1;
             -webkit-transform: translateY(0px);
             -moz-transform: translateY(0px);
             -ms-transform: translateY(0px);
             -o-transform: translateY(0px);
             transform: translateY(0px);
-            display: block;
         }
     }
 @keyframes fadeFromtop  {
     0%{
-        opacity:.8;
+        opacity: 1;
         -webkit-transform: translateY(0px);
         -moz-transform: translateY(0px);
         -ms-transform: translateY(0px);
@@ -171,7 +188,7 @@
         transform: translateY(0px);
     }
     100%{
-        opacity: 0;
+        opacity: 1;
         -webkit-transform: translateY(100%);
         -moz-transform: translateY(100%);
         -ms-transform: translateY(100%);
@@ -181,12 +198,12 @@
 }
 .text2 {
     padding-top: 4%;
-    padding-right: 26%;
+    padding-right: 34%;
     text-align: right;
 }
 .text {
     padding-top: 4%;
-    padding-left: 26%;
+    padding-left: 34%;
 }
 .hider-private {
     position: relative;
@@ -205,11 +222,11 @@
 }
 
 .hider-private:hover .hovered{
-    padding: 30px 20px 20px 20px;
+    padding: 30px 0 0 0 ;
     animation-name: fadeFromBottom;
     -webkit-animation-name: fadeFromBottom;
-    animation-duration: 400ms;
-    -webkit-animation-duration: 400ms;
+    animation-duration: 600ms;
+    -webkit-animation-duration: 600ms;
     animation-timing-function: ease-in;
     -webkit-animation-timing-function: ease-in;
     animation-fill-mode: forwards;
@@ -251,6 +268,7 @@
     color: black;
     text-decoration: none;
     background-color: #d5b087;
+    transition: 400ms;
 }
 .custom-work {
     background-image: url('img/back-custom-work.png');
@@ -294,6 +312,7 @@
     background-color: white;
     color: black;
     text-decoration: none;
+    transition: 400ms;
 }
 /** about **/
 #amy-working {    
@@ -336,26 +355,31 @@
     color: black;
 }
 /** education **/
-.ed {
+.education {
+    position: relative;
     background-image: url('img/texture.png');
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative
+}
+
+.ed {    
     font-family: 'roboto', sans-serif;
+    padding: 20px 0px 20px 27%;
+    margin-left: 45px;
 }
 .ed h1 {
     font-size: 22px;
 }
-.ed hr {
-    width: 42px;
-    height: 2px;
-    background-color: #babeab;
-    float: left;
-    margin-top: 10px;
-}
+
 .ed p {
     font-size: 12px;
 }
 .circlewrap {
     width: 50px;
-    margin-top: 42px;
+    margin-top: 22px;
+    display: block;
+    float: left;
 }
 .circle {
     height: 50px;
@@ -367,21 +391,340 @@
     line-height: 13px;
     padding-top: 13px;
 }
-.years {
-    padding: 22px 0 22px 30%; 
-    float: left;
+.ed hr {
+    background-color: #babeab;
+    width: 42px;
+    height: 2px;
+    margin-left: 0px;
+    margin-top: 29px;
 }
 .sep {
     height: 16px;
     width: 1px;
     background-color: white;
     margin: 4px auto 4px auto;
+    position: relative;
 }
 .info {
+    font-family: 'roboto', sans-serif;
+    width: 200px;
     float: left;
-    margin-top: 72px;
+    margin: 30px 0 0 15px;
 }
-.amy {
-    overflow: visible !important;
-    padding: 0 0 0 0;
+.info2 {
+    font-family: 'roboto', sans-serif;
+    float: left;
+    padding: 20px 0 0 15px;
+    width: 300px;
+}
+.infowrap {
+    width: 400px;
+    float: left;
+}
+.ed-amy {
+    background-image: url('img/amy-finished.png');
+    width: 100%;
+    height: 460px;
+}
+/** Selected Commissions **/
+.selected {
+    background-image: url('img/arachnoid.png');
+}
+.sel {    
+    font-family: 'roboto', sans-serif;
+    padding: 20px 0 20px 0;
+    margin-left: 45px;
+    width:auto;
+}
+.sel h1 {
+    font-size: 22px;
+}
+
+.sel p {
+    font-size: 12px;
+}
+.sel hr {
+    background-color: #babeab;
+    width: 42px;
+    height: 2px;
+    margin-left: 0px;
+    margin-top: 29px;
+}
+.sel a {
+    text-decoration: none;
+}
+.circle-button {
+    height: 50px;
+    width: 50px;
+    border-style: solid;
+    border-color: #d5b087;
+    border-radius: 200px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 13px;
+    padding-top: 13px;
+    color: black;
+}
+
+.circle-button:hover {
+    background-color: #d5b087;
+    transition: 400ms;
+}
+/** More about Amy **/
+.more-amy {
+    background-image: url('img/pattern.png');
+    overflow: hidden;
+    height: 180px;
+    width: 100%;
+    float: left;
+    position: relative;
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+    padding-top: 20px;
+}
+.more-box {
+    font-family: 'roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 15px 0 0 0;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d5b087;
+    padding: 9px 13px 9px 13px;
+    color:black;
+}
+.more-box:hover {
+    background-color: #d5b087;
+    color: black;
+    text-decoration: none;
+    transition: 400ms;
+}
+.more-amy h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 26px;
+}
+.more-amy-content {
+    width: 400px;
+    margin: auto;
+    vertical-align: center;
+    display: inline-block;
+}
+.more-amy-amy {
+    background-image: url('img/amy-smile.png') no-repeat;
+    height: 200px;
+    display: inline-block;
+    margin-top: -40px;
+    vertical-align: center;
+    position: relative;
+}
+/** Ted  **/
+.ted-info {
+    background-image: url('img/back-ted.png');
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative
+}
+.head {
+    padding: 20px 0px 20px 27%;
+    font-family: 'roboto', sans-serif;
+    color: white;
+}
+.head h1 {
+    font-size: 22px;
+}
+.head h2 {
+    font-size: 14px;
+}
+.head hr {
+    background-color: white;
+    width: 42px;
+    height: 2px;
+    margin: 29px 0 29px 0;
+
+}
+.head p {
+    font-size: 14px;
+    padding-right: 116px;
+}
+iframe {
+    padding: none !important;
+    margin: none !important;
+    display: block !important;
+    object-fit: cover;
+}
+.video {
+    background-color: black;
+    width: 100%;
+}
+/** Recent Work **/
+.header-work {
+    margin: 22px 0 0 0;
+}
+.header-work h1{
+    font-size: 22px;
+    font-family: 'roboto', sans-serif;
+    text-align: center;
+}
+.header-work hr {
+    background-color: #babeab;
+    height: 2px;
+    width: 42px;
+}
+.project-card {
+    margin: auto;
+    color: #3a3429;
+    font-family: 'roboto', sans-serif;
+    text-align: center;
+    padding: 0;
+}
+.project-card h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.project-card img {
+    margin: auto;
+    display: block;
+}
+.brain {
+    background-image: url('img/brain.png');
+    overflow: hidden;
+    height: 294px;
+    width: 264px;
+    margin: 10px auto 0 auto;
+}
+.bioforms {
+    background-image: url('img/bioforms.png');
+    overflow: hidden;
+    height: 294px;
+    width: 264px;
+    margin: 10px auto 0 auto;
+}
+.janus {
+    background-image: url('img/janus.png');
+    overflow: hidden;
+    height: 294px;
+    width: 264px;
+    margin: 10px auto 0 auto;
+}
+.petruda {
+    background-image: url('img/petruda.png');
+    overflow: hidden;
+    height: 294px;
+    width: 264px;
+    margin: 10px auto 0 auto;
+}
+.card-hovered {
+    position:absolute;
+    height: 100%;
+    color:black;
+    width: 100%;
+    opacity: 0;
+    animation-name: fadeFromtop;
+    -webkit-animation-name: fadeFromtop;
+    animation-duration: 400ms;
+    -webkit-animation-duration: 400ms;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    }
+.card1:hover .card-hovered{
+    animation-name: fadeFromBottom;
+    -webkit-animation-name: fadeFromBottom;
+    animation-duration: 400ms;
+    -webkit-animation-duration: 400ms;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+.hider-card {
+    background: #4a433b;
+    opacity: 0;
+    position: absolute;
+    height: 294px;
+    width: 264px;
+}
+.hider-box {
+    height: 259px;
+    width: 232px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    margin: 17px auto;
+}
+.hider-card:hover {
+    background: #4a433b;
+    opacity: .8;
+    transition: 600ms;
+}
+.card-text {
+    text-transform: uppercase;
+    padding: 45% 10% 0 0;
+    text-align: center;
+    display: block;
+}
+.card-text a {
+    color: white;
+    text-decoration: none;
+    font-family: 'roboto', sans-serif;
+}
+.year {
+    position: absolute;
+    left: 52%;
+    bottom: 0;
+    color: white;
+    background: linear-gradient(42deg, #a08160, #cfaa82);
+    border-radius: 100px;
+    padding: 12px 4px;
+    width: 50px;
+    height: 50px;
+    transform: translateX(-50%) translateY(50%);
+    z-index: 2;
+    font-family: 'roboto', sans-serif;
+}
+.project-info{
+    font-family: 'roboto', sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+.project-info h2 {
+    font-size: 17px;
+    color: #3a3429;
+}
+.project-info hr {
+    background-color: #aa9c8d;
+    width: 200px;
+    height: 1px;
+    margin: auto;
+}
+.project-info p {
+    font-size: 17px;
+    color: #908172;
+    padding: 10px;
+}
+.work-box {
+    font-family: 'roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: auto;
+    display: block;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d5b087;
+    padding: 9px 13px 9px 13px;
+    color:black;
+    z-index: 2;
+    width: 150px;
+}
+.work-box:hover {
+    background-color: #d5b087;
+    transition: 400ms;
+    color: black;
+    text-decoration: none;
 }
