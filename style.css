@@ -47,17 +47,17 @@
 }
 /** Nav Styles **/
 
-.navbar ul {
+.header .navbar ul {
     display: flex;
     width: 100%;
     margin-bottom: 10px;
 }
 
-.navbar ul li {
+.header .navbar ul li {
     flex-grow: 1;
     padding: 10px;
 }
-.nav-link {
+.header .nav-link {
     color: #333333;
     text-transform: uppercase;
     font-family: 'roboto', sans-serif;
@@ -67,7 +67,7 @@
     font-weight: bold;
     padding: 0 0 0 0;
 }
-.nav-link:hover {
+.header .nav-link:hover {
     color: black;
     border-bottom-style: solid;
     border-bottom-color: #d5b087;
@@ -118,35 +118,15 @@
     transition: 600ms;
     
 }
-
-
 .hovered {
     position:absolute;
-    top:0;
     left: 0;
     height: 100%;
     color:white;
     width: 100%;
-    opacity: 0;
-    animation-name: fadeFromtop;
-    -webkit-animation-name: fadeFromtop;
-    animation-duration: 600ms;
-    -webkit-animation-duration: 600ms;
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-    }
+}
 .hider-public:hover .hovered{
     padding: 30px 0 0 0;
-    animation-name: fadeFromBottom;
-    -webkit-animation-name: fadeFromBottom;
-    animation-duration: 600ms;
-    -webkit-animation-duration: 600ms;
-    animation-timing-function: ease-in;
-    -webkit-animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
 }
 
 .hider-public h2 {
@@ -160,42 +140,7 @@
 .hider-public p {
     font-size: 12px;
 }
-@keyframes fadeFromBottom  {
-        0%{
-            opacity:1;
-            -webkit-transform: translateY(100%);
-            -moz-transform: translateY(100%);
-            -ms-transform: translateY(100%);
-            -o-transform: translateY(100%);
-            transform: translateY(100%);
-        }
-        100%{
-            opacity: 1;
-            -webkit-transform: translateY(0px);
-            -moz-transform: translateY(0px);
-            -ms-transform: translateY(0px);
-            -o-transform: translateY(0px);
-            transform: translateY(0px);
-        }
-    }
-@keyframes fadeFromtop  {
-    0%{
-        opacity: 1;
-        -webkit-transform: translateY(0px);
-        -moz-transform: translateY(0px);
-        -ms-transform: translateY(0px);
-        -o-transform: translateY(0px);
-        transform: translateY(0px);
-    }
-    100%{
-        opacity: 1;
-        -webkit-transform: translateY(100%);
-        -moz-transform: translateY(100%);
-        -ms-transform: translateY(100%);
-        -o-transform: translateY(100%);
-        transform: translateY(100%);
-    }
-}
+
 .text2 {
     padding-top: 4%;
     padding-right: 34%;
@@ -727,4 +672,92 @@ iframe {
     transition: 400ms;
     color: black;
     text-decoration: none;
+}
+
+/** footer **/
+
+.footer {
+    background-image: url('img/footer.png');
+    height: 121px;
+    width: 100%;
+    font-family: 'roboto', sans-serif;
+    margin-top: 20px;
+}
+
+.footer.navbar ul {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.footer .navbar ul li {
+    flex-grow: 1;
+    padding: 8px;
+}
+.footer .nav-link {
+    color: #929291;
+    text-transform: uppercase;
+    font-family: 'roboto', sans-serif;
+    font-size: 15px; 
+    text-align: center; 
+    margin-bottom: 1px; 
+    font-weight: bold;
+    padding: 0 0 0 0;
+}
+.footer .nav-link:hover {
+    color: white;
+    border-bottom-style: solid;
+    border-bottom-color: #d5b087;
+    border-bottom-width: 1px;
+    margin-bottom: 0px;
+}
+.footer-cover .row {
+    height: 121px;
+}
+.footer-logo {
+    height: 53px;
+    width: 105px;
+    background-image: url('img/logo-white.png');
+    display: block;
+    float: left;
+}
+.footer-solid {
+    height: 75px;
+    width: 100%;
+    background-color: #191917;
+}
+.box5 {
+    font-family: 'roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 44px 0 0;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d5b087;
+    padding: 9px 13px 9px 13px;
+    float: right;
+    color:white;
+    height: 40px;
+}
+
+.box5:hover {
+    background-color: #d5b087;
+    outline: none;
+    color: black;
+    text-decoration: none;
+    transition: 400ms;
+}
+.footer .col-sm-4 {
+    color:#32322f; 
+    font-size: 13px;
+    margin-top: 17px;
+}
+.footer-text {
+    padding-top: 9px;
+}
+.footer a {
+    color: #3f372d;
+
 }
