@@ -103,30 +103,30 @@
     font-family: 'roboto', sans-serif;
 }
 .hider-bg {
-    background: #4a433b;
-    opacity: 0;
+    background-color: rgba(74, 67, 59, 0);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
+    transition: 600ms;
 }
 .hider-bg:hover {
-    background: #4a433b;
-    opacity: .8;
+    background-color: rgba(74, 67, 59, 0.8);
     transition: 600ms;
-    
 }
 .hovered {
     position:absolute;
     left: 0;
+    top: 370px;
     height: 100%;
     color:white;
     width: 100%;
+    transition: 600ms;
 }
 .hider-public:hover .hovered{
-    padding: 30px 0 0 0;
+    top: 0;
+    transition-duration: 600ms;
 }
 
 .hider-public h2 {
@@ -163,19 +163,12 @@
     padding-top: 315px;
     padding-left: 250px; 
     font-family: 'roboto', sans-serif;
- 
+    transition: 600ms;
 }
 
 .hider-private:hover .hovered{
-    padding: 30px 0 0 0 ;
-    animation-name: fadeFromBottom;
-    -webkit-animation-name: fadeFromBottom;
-    animation-duration: 600ms;
-    -webkit-animation-duration: 600ms;
-    animation-timing-function: ease-in;
-    -webkit-animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
+    top: 0;
+    transition-duration: 600ms;
 }
 
 .hider-private h2 {
@@ -206,6 +199,7 @@
     color: black;
     text-decoration: none;
     text-align: left;
+    transition: 600ms;
 }
 
 .box2:hover {
@@ -219,9 +213,10 @@
     background-image: url('img/back-custom-work.png');
     overflow: hidden;
     height: 168px;
+    width: 100%;
     float: left;
     position: relative;
-    z-index: 3;
+    z-index: 1;
     margin-top: -22px;
     color: #3a3429;
     text-align: center;
@@ -242,15 +237,16 @@
     font-family: 'roboto', sans-serif;
     font-size: 13px;
     font-weight: bold;
-    margin: auto;
+    margin: 30px auto 0 auto;
     text-transform: uppercase;
     text-align: center;
     border-style: solid;
     border-width: 2px;
     border-color: white;
-    padding: 17px 17px 17px 17px;
+    padding: 9px 17px 9px 17px;
     width: 200px;   
     color: white;
+    transition: 600ms;
 }
 .box3:hover {
     outline: none;
@@ -409,6 +405,7 @@
     line-height: 13px;
     padding-top: 13px;
     color: black;
+    transition: 600ms;
 }
 
 .circle-button:hover {
@@ -426,6 +423,8 @@
     text-align: center;
     font-family: 'roboto', sans-serif;
     padding-top: 20px;
+    overflow: visible;
+    z-index: 1;
 }
 .more-box {
     font-family: 'roboto', sans-serif;
@@ -528,6 +527,7 @@ iframe {
 .project-card h1 {
     font-size: 20px;
     text-transform: uppercase;
+    padding: 30px 0 0 0;
 }
 .project-card img {
     margin: auto;
@@ -567,24 +567,13 @@ iframe {
     color:black;
     width: 100%;
     opacity: 0;
-    animation-name: fadeFromtop;
-    -webkit-animation-name: fadeFromtop;
-    animation-duration: 400ms;
-    -webkit-animation-duration: 400ms;
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-    }
+    top: 150px;
+    
+}
 .card1:hover .card-hovered{
-    animation-name: fadeFromBottom;
-    -webkit-animation-name: fadeFromBottom;
-    animation-duration: 400ms;
-    -webkit-animation-duration: 400ms;
-    animation-timing-function: ease-in;
-    -webkit-animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
+    opacity: 1;
+    top: 15px;
+    transition-duration: 600ms;
 }
 .hider-card {
     background: #4a433b;
@@ -592,14 +581,16 @@ iframe {
     position: absolute;
     height: 294px;
     width: 264px;
+    transition: 600ms;
 }
 .hider-box {
     height: 259px;
-    width: 232px;
     border-style: solid;
     border-color: white;
     border-width: 1px;
     margin: 17px auto;
+    width: 234px;
+    transition: 600ms;
 }
 .hider-card:hover {
     background: #4a433b;
@@ -620,7 +611,7 @@ iframe {
 .year {
     position: absolute;
     left: 52%;
-    bottom: 0;
+    top: 320px;
     color: white;
     background: linear-gradient(42deg, #a08160, #cfaa82);
     border-radius: 100px;
@@ -760,4 +751,93 @@ iframe {
 .footer a {
     color: #3f372d;
 
+}
+/** public commission Styles **/
+.top-bg {
+    background-image: url('img/top-bg.png');
+    height: 275px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    margin-top: -20px;
+}
+.top-bg h1 {
+    font-family: 'roboto', sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 130px;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+/** main styles **/
+.main-content {
+    font-family: 'roboto', sans-serif;
+}
+.main-content h1 {
+    font-size: 28px;
+    padding-top: 68px;
+}
+.main-content hr {
+    height: 2px;
+    width: 42px;
+    background-color: #d5b087;
+    float: left;
+    margin: 19px 0 33px 0;
+}
+.main-content p {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+.main-content h2 {
+    font-size: 20px;
+    padding-top: 49px;
+}
+.sidebar {
+    background-color: #ededed;
+    height: 493px;
+    width: auto;
+    margin-top: 22px;
+}
+.sidebar h1 {
+    font-size: 22px;
+    padding: 51px 0 0 38px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.sidebar hr {
+    margin: 29px 0 0 38px;
+}
+.sidebar p {
+    font-size: 16px;
+    padding: 39px 18px 0 38px;
+    font-weight: normal;
+}
+.sidebar-box {
+    font-family: 'roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 13px 0 0 38px;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d5b087;
+    padding: 9px 13px 9px 13px;
+    float: left;
+    color:#3a3429;
+    transition: 600ms;
+}
+.sidebar-box:hover {
+    color: #3a3429;
+    background-color: #d5b087;
+    text-decoration: none;
+    transition: 600ms;
+}
+.footer2 {
+    position: relative;
+    z-index: 2;
+    margin-top:-40px;
+    height: auto;
+    width: auto;
 }
